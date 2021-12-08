@@ -1,0 +1,14 @@
+# full_v680-user 10 QP1A.190711.020 03021650 release-keys
+- manufacturer: symphony
+- platform: mt6761
+- codename: ATOM
+- flavor: full_v680-user
+- release: 10
+- id: QP1A.190711.020
+- incremental: 03021650
+- tags: release-keys
+- fingerprint: Symphony/ATOM/ATOM:10/QP1A.190711.020/03021650:user/release-keys
+- is_ab: false
+- brand: Symphony
+- branch: full_v680-user-10-QP1A.190711.020-03021650-release-keys
+- repo: symphony_atom_dump

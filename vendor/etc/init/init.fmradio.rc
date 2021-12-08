@@ -1,0 +1,21 @@
+service fmradio_tst_svc /vendor/bin/fmradio_tst
+    user system
+    group radio system media audio
+    oneshot
+    disabled
+    
+on property:vendor.execmd.fm.trigger=0
+    stop fmradio_tst_svc
+    setprop vendor.execmd.fm.status 0
+
+on property:vendor.execmd.fm.trigger=1
+    stop fmradio_tst_svc
+    start fmradio_tst_svc
+
+
+on property:vendor.execmd.fm.ro=1
+    chmod 664 /dev/fm
+
+on property:vendor.execmd.fm.ro=0
+    chmod 660 /dev/fm
+

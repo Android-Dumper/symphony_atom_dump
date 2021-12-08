@@ -1,0 +1,6 @@
+harmony.app
+com.gm.shadhin
+com.lb.adv
+com.mmbd.fyf_embed
+com.xosh.xoshlife
+com.xoshplay.store

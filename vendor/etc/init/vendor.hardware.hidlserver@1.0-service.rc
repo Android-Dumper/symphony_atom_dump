@@ -1,0 +1,17 @@
+service vendor.hardware.hidlserver@1.0-service /vendor/bin/hw/vendor.hardware.hidlserver@1.0-service
+    interface vendor.hardware.hidlserver@1.0::IHidlserver default
+    class hal
+    user system
+    group system input
+
+on property:vendor.hs.trigger=0
+    stop vendor.hardware.hidlserver@1.0-service
+
+on property:vendor.hs.trigger=1
+    restart vendor.hardware.hidlserver@1.0-service
+
+on post-fs-data
+    mkdir /data/vendor/hidlserver 2770 system system
+    chmod 2770 /data/vendor/hidlserver
+    chown system system /data/vendor/hidlserver
+

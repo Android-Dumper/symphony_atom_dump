@@ -1,0 +1,21 @@
+on charger
+    #ID:KFGAQWKA-458 start
+    #DESCRIPTION:GreenLEDThreshold percentage value when charging is customizable. Default is 95%.
+    #AUTHOR:yinglong.tang
+    #TINNO BEGIN	
+    trigger load_system_props_action
+    #TINNO END
+    start kpoc_charger
+
+service kpoc_charger /system/bin/kpoc_charger
+    class charger
+    group system wakelock
+    capabilities BLOCK_SUSPEND SYS_ADMIN SYS_BOOT
+    #ID:KFGAQWKA-458
+#DESCRIPTION:GreenLEDThreshold percentage value when charging is customizable. Default is 95%.
+#AUTHOR:yinglong.tang
+#TINNO BEGIN
+on init
+    on load_system_props_action
+    load_system_props
+#TINNO END

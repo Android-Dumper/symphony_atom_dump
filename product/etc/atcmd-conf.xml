@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+    PERSO ID: MBA_FTR_FCCDegradePowerOfSAR_REQC6428 
+    Config the AT CMD for degrade power of SAR - for V680.
+    Author: yinglong.tang 
+-->
+<atcmds version="1">
+
+    <!-- GSM1800  backoff 2db -->
+    <ATCMD values="AT+ERFTX=10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,16,16,16,16,16,16,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,16,16,16,16,16,16,16,0,0,0,0,0,0,0,0"></ATCMD>
+    <!-- WCDMA band1  backoff 2db -->
+    <!--
+    <ATCMD values="AT+ERFTX=10,2,16,16"></ATCMD>
+    -->
+    <!-- LTE band1 backoff 2db -->
+    <!--
+    <ATCMD values="AT+ERFTX=10,3,1,16,0,0"></ATCMD>
+    -->
+    <!-- LTE band3 backoff 3db -->
+    <ATCMD values="AT+ERFTX=10,3,3,24,0,0"></ATCMD>
+
+    <!-- LTE band7 backoff 3db -->
+    <!--
+    <ATCMD values="AT+ERFTX=10,3,7,24,0,0"></ATCMD>
+    -->
+</atcmds>
